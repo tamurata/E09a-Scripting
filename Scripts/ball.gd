@@ -15,7 +15,7 @@ func _ready():
 func _physics_process(delta):
  var bodies = get_colliding_bodies()
  for body in bodies:
-  if body.is_in_group("Tile"):
+  if body.is_in_group("Tiles"):
    emit_signal("score",body.score)
    body.queue_free()
   if body.get_name() == "Paddle":
